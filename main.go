@@ -19,6 +19,14 @@ type Number struct {
 	number int
 }
 
+type Option struct {
+	message string
+}
+
+func print_message(message Option) {
+	fmt.Println(message.message)
+}
+
 func get_i() {
 
 	var num int
@@ -32,7 +40,17 @@ func get_i() {
 
 func main() {
 
-	fmt.Println("Enter Num: ")
+	num_message := Option{
+		message: "Enter a Number: ",
+	}
+
+	o_message := Option{
+		message: "[WELCOME TO EVEN Or Odd Application]",
+	}
+
+	print_message(o_message)
+
+	print_message(num_message)
 	go get_i()
 	get_i()
 }
