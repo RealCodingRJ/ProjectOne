@@ -48,9 +48,9 @@ func main() {
 		message: "[WELCOME TO EVEN Or Odd Application]",
 	}
 
-	print_message(o_message)
-
-	print_message(num_message)
 	go get_i()
 	get_i()
+
+	go print_message(o_message)
+	go print_message(num_message)
 }
